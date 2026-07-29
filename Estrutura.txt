@@ -1,0 +1,16 @@
+estoque_project/
+│
+├── backend/
+│   ├── models.py        # Classes Produto, Estoque
+│   ├── services.py      # Lógica de negócio (adicionar, remover, atualizar, relatórios)
+│   └── __init__.py
+│
+├── frontend/
+│   ├── web_flask.py     # Interface web usando Flask
+│   ├── templates/       # HTML separado
+│   └── static/          # CSS, JS, imagens
+│
+├── tests/
+│   └── test_estoque.py  # Testes unitários
+│
+└── main.py              # Ponto de entrada do sistema
