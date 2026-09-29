@@ -10,3 +10,16 @@ C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica
 C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.exe.config
 C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.Frm_tiposdecaminhao.resources
 C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.Frm_inicial.resources
+C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.config
+C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe
+C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.pdb
+C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.csproj.AssemblyReference.cache
+C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.exe.config
+C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.Frm_inicial.resources
+C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.Frm_tiposdecaminhao.resources
+C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.Properties.Resources.resources
+C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.csproj.GenerateResource.cache
+C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.csproj.CoreCompileInputs.cache
+C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.exe
+C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.pdb
+C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.Frm_orcamento.resources

@@ -169,17 +169,26 @@ namespace ProjetoLogistica
         private void Btn_3q_Click(object sender, EventArgs e)
         {
             Pic_imagens.Image = Properties.Resources.Caminhão_3_4;
-     
+            Pic_ft01.Image = Properties.Resources.motorista01;
+            Pic_ft02.Image = Properties.Resources.motorista02;
+            Pic_ft03.Image = Properties.Resources.motorista03;
+
         }
 
         private void Btn_toco_Click(object sender, EventArgs e)
         {
             Pic_imagens.Image = Properties.Resources.TOCO;
+            Pic_ft01.Image = Properties.Resources.motorista01;
+            Pic_ft02.Image = Properties.Resources.motorista02;
+            Pic_ft03.Image = Properties.Resources.motorista04;
         }
 
         private void Btn_truck_Click(object sender, EventArgs e)
         {
             Pic_imagens.Image = Properties.Resources.truck;
+            Pic_ft01.Image = Properties.Resources.motorista05;
+            Pic_ft02.Image = Properties.Resources.motorista06;
+            Pic_ft03.Image = Properties.Resources.motorista04;
         }
     }
     }

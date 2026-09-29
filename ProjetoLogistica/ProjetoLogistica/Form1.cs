@@ -22,5 +22,11 @@ namespace ProjetoLogistica
             Frm_tiposdecaminhao Chametelatipodecaminhao = new Frm_tiposdecaminhao();
             Chametelatipodecaminhao.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Frm_orcamento Chameatelaorcamento = new Frm_orcamento();
+            Chameatelaorcamento.Show();
+        }
     }
 }
