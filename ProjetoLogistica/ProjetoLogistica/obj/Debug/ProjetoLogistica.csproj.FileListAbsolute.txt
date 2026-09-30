@@ -23,3 +23,4 @@ C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\Projet
 C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.exe
 C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.pdb
 C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.Frm_orcamento.resources
+C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.Frm_orcamento.resources

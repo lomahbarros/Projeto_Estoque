@@ -47,6 +47,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnCalcularFrete = new System.Windows.Forms.Button();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtBairroO = new System.Windows.Forms.TextBox();
+            this.txtBairroFim = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtKm = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Lbl_titulo_telaorcamento
@@ -54,7 +59,7 @@
             this.Lbl_titulo_telaorcamento.AutoSize = true;
             this.Lbl_titulo_telaorcamento.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_titulo_telaorcamento.ForeColor = System.Drawing.Color.Black;
-            this.Lbl_titulo_telaorcamento.Location = new System.Drawing.Point(288, 9);
+            this.Lbl_titulo_telaorcamento.Location = new System.Drawing.Point(336, 9);
             this.Lbl_titulo_telaorcamento.Name = "Lbl_titulo_telaorcamento";
             this.Lbl_titulo_telaorcamento.Size = new System.Drawing.Size(222, 28);
             this.Lbl_titulo_telaorcamento.TabIndex = 0;
@@ -63,7 +68,7 @@
             // txtRuaOrigem
             // 
             this.txtRuaOrigem.AutoSize = true;
-            this.txtRuaOrigem.Location = new System.Drawing.Point(12, 70);
+            this.txtRuaOrigem.Location = new System.Drawing.Point(19, 111);
             this.txtRuaOrigem.Name = "txtRuaOrigem";
             this.txtRuaOrigem.Size = new System.Drawing.Size(92, 13);
             this.txtRuaOrigem.TabIndex = 1;
@@ -72,7 +77,7 @@
             // txtCidadeOrigem
             // 
             this.txtCidadeOrigem.AutoSize = true;
-            this.txtCidadeOrigem.Location = new System.Drawing.Point(251, 74);
+            this.txtCidadeOrigem.Location = new System.Drawing.Point(258, 115);
             this.txtCidadeOrigem.Name = "txtCidadeOrigem";
             this.txtCidadeOrigem.Size = new System.Drawing.Size(40, 13);
             this.txtCidadeOrigem.TabIndex = 3;
@@ -80,7 +85,7 @@
             // 
             // textCidadeO
             // 
-            this.textCidadeO.Location = new System.Drawing.Point(311, 71);
+            this.textCidadeO.Location = new System.Drawing.Point(318, 112);
             this.textCidadeO.Name = "textCidadeO";
             this.textCidadeO.Size = new System.Drawing.Size(100, 20);
             this.textCidadeO.TabIndex = 4;
@@ -88,7 +93,7 @@
             // txtUfOrigem
             // 
             this.txtUfOrigem.AutoSize = true;
-            this.txtUfOrigem.Location = new System.Drawing.Point(475, 71);
+            this.txtUfOrigem.Location = new System.Drawing.Point(624, 112);
             this.txtUfOrigem.Name = "txtUfOrigem";
             this.txtUfOrigem.Size = new System.Drawing.Size(40, 13);
             this.txtUfOrigem.TabIndex = 5;
@@ -96,7 +101,7 @@
             // 
             // textUFO
             // 
-            this.textUFO.Location = new System.Drawing.Point(533, 67);
+            this.textUFO.Location = new System.Drawing.Point(679, 108);
             this.textUFO.Name = "textUFO";
             this.textUFO.Size = new System.Drawing.Size(100, 20);
             this.textUFO.TabIndex = 6;
@@ -104,15 +109,15 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 36);
+            this.label4.Location = new System.Drawing.Point(29, 77);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 13);
+            this.label4.Size = new System.Drawing.Size(79, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "CEP ORIGEM";
+            this.label4.Text = "CEP de Origem";
             // 
             // txtCepDestino
             // 
-            this.txtCepDestino.Location = new System.Drawing.Point(89, 228);
+            this.txtCepDestino.Location = new System.Drawing.Point(101, 218);
             this.txtCepDestino.Mask = "00000-000";
             this.txtCepDestino.Name = "txtCepDestino";
             this.txtCepDestino.Size = new System.Drawing.Size(100, 20);
@@ -122,38 +127,38 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 235);
+            this.label1.Location = new System.Drawing.Point(13, 221);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 13);
+            this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 9;
-            this.label1.Text = "CEP";
+            this.label1.Text = "CEP de Destivo";
             // 
             // txtCepOrigem
             // 
-            this.txtCepOrigem.Location = new System.Drawing.Point(102, 33);
+            this.txtCepOrigem.Location = new System.Drawing.Point(128, 70);
             this.txtCepOrigem.Mask = "00000-000";
             this.txtCepOrigem.Name = "txtCepOrigem";
             this.txtCepOrigem.Size = new System.Drawing.Size(100, 20);
-            this.txtCepOrigem.TabIndex = 10;           
+            this.txtCepOrigem.TabIndex = 10;
             this.txtCepOrigem.Leave += new System.EventHandler(this.txtCepOrigem_Leave);
             // 
             // txtRuaO
             // 
-            this.txtRuaO.Location = new System.Drawing.Point(131, 64);
+            this.txtRuaO.Location = new System.Drawing.Point(138, 105);
             this.txtRuaO.Name = "txtRuaO";
             this.txtRuaO.Size = new System.Drawing.Size(100, 20);
             this.txtRuaO.TabIndex = 11;
             // 
             // txtRuafim
             // 
-            this.txtRuafim.Location = new System.Drawing.Point(167, 279);
+            this.txtRuafim.Location = new System.Drawing.Point(142, 265);
             this.txtRuafim.Name = "txtRuafim";
             this.txtRuafim.Size = new System.Drawing.Size(100, 20);
             this.txtRuafim.TabIndex = 17;
             // 
             // textUFFim
             // 
-            this.textUFFim.Location = new System.Drawing.Point(569, 282);
+            this.textUFFim.Location = new System.Drawing.Point(679, 271);
             this.textUFFim.Name = "textUFFim";
             this.textUFFim.Size = new System.Drawing.Size(100, 20);
             this.textUFFim.TabIndex = 16;
@@ -161,7 +166,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(511, 286);
+            this.label2.Location = new System.Drawing.Point(624, 274);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 15;
@@ -169,7 +174,7 @@
             // 
             // textCidadeFim
             // 
-            this.textCidadeFim.Location = new System.Drawing.Point(347, 286);
+            this.textCidadeFim.Location = new System.Drawing.Point(322, 272);
             this.textCidadeFim.Name = "textCidadeFim";
             this.textCidadeFim.Size = new System.Drawing.Size(100, 20);
             this.textCidadeFim.TabIndex = 14;
@@ -177,7 +182,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(287, 289);
+            this.label3.Location = new System.Drawing.Point(262, 275);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 13;
@@ -186,7 +191,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(48, 285);
+            this.label5.Location = new System.Drawing.Point(23, 271);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 13);
             this.label5.TabIndex = 12;
@@ -194,7 +199,7 @@
             // 
             // btnCalcularFrete
             // 
-            this.btnCalcularFrete.Location = new System.Drawing.Point(505, 150);
+            this.btnCalcularFrete.Location = new System.Drawing.Point(853, 422);
             this.btnCalcularFrete.Name = "btnCalcularFrete";
             this.btnCalcularFrete.Size = new System.Drawing.Size(75, 23);
             this.btnCalcularFrete.TabIndex = 18;
@@ -204,11 +209,52 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(569, -4);
+            this.webBrowser1.Location = new System.Drawing.Point(-3, 451);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(233, 280);
+            this.webBrowser1.Size = new System.Drawing.Size(974, 317);
             this.webBrowser1.TabIndex = 19;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(436, 111);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(34, 13);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Bairro";
+            // 
+            // txtBairroO
+            // 
+            this.txtBairroO.Location = new System.Drawing.Point(489, 104);
+            this.txtBairroO.Name = "txtBairroO";
+            this.txtBairroO.Size = new System.Drawing.Size(100, 20);
+            this.txtBairroO.TabIndex = 21;
+            // 
+            // txtBairroFim
+            // 
+            this.txtBairroFim.Location = new System.Drawing.Point(506, 272);
+            this.txtBairroFim.Name = "txtBairroFim";
+            this.txtBairroFim.Size = new System.Drawing.Size(100, 20);
+            this.txtBairroFim.TabIndex = 23;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(453, 279);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(34, 13);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Bairro";
+            // 
+            // txtKm
+            // 
+            this.txtKm.AutoSize = true;
+            this.txtKm.Location = new System.Drawing.Point(789, 427);
+            this.txtKm.Name = "txtKm";
+            this.txtKm.Size = new System.Drawing.Size(33, 13);
+            this.txtKm.TabIndex = 24;
+            this.txtKm.Text = "txtKm";
             // 
             // Frm_orcamento
             // 
@@ -216,7 +262,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjetoLogistica.Properties.Resources.backgr;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(964, 761);
+            this.Controls.Add(this.txtKm);
+            this.Controls.Add(this.txtBairroFim);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtBairroO);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.btnCalcularFrete);
             this.Controls.Add(this.txtRuafim);
@@ -238,7 +289,6 @@
             this.Controls.Add(this.Lbl_titulo_telaorcamento);
             this.Name = "Frm_orcamento";
             this.Text = "Orçamento";
-            this.Load += new System.EventHandler(this.Frm_orcamento_Load);
             this.Load += new System.EventHandler(this.Frm_orcamento_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -266,5 +316,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCalcularFrete;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtBairroO;
+        private System.Windows.Forms.TextBox txtBairroFim;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label txtKm;
     }
 }
