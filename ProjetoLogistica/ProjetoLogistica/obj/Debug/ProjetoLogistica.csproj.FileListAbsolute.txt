@@ -7,7 +7,6 @@ C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica
 C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.csproj.CoreCompileInputs.cache
 C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.exe
 C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.pdb
-C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.exe.config
 C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.Frm_tiposdecaminhao.resources
 C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.Frm_inicial.resources
 C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.config
@@ -24,3 +23,14 @@ C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\Projet
 C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.pdb
 C:\Users\Aloma Barros\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.Frm_orcamento.resources
 C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.Frm_orcamento.resources
+C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\Microsoft.Web.WebView2.Core.dll
+C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\Microsoft.Web.WebView2.Core.xml
+C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
+C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\Microsoft.Web.WebView2.Wpf.xml
+C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoL.9C62737C.Up2Date
+C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.exe.config

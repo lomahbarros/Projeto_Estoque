@@ -46,12 +46,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnCalcularFrete = new System.Windows.Forms.Button();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.label6 = new System.Windows.Forms.Label();
             this.txtBairroO = new System.Windows.Forms.TextBox();
             this.txtBairroFim = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtKm = new System.Windows.Forms.Label();
+            this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
+            ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
             // 
             // Lbl_titulo_telaorcamento
@@ -207,14 +208,6 @@
             this.btnCalcularFrete.UseVisualStyleBackColor = true;
             this.btnCalcularFrete.Click += new System.EventHandler(this.btnCalcularFrete_Click);
             // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Location = new System.Drawing.Point(-3, 451);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(974, 317);
-            this.webBrowser1.TabIndex = 19;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -256,6 +249,17 @@
             this.txtKm.TabIndex = 24;
             this.txtKm.Text = "txtKm";
             // 
+            // webView21
+            // 
+            this.webView21.AllowExternalDrop = true;
+            this.webView21.CreationProperties = null;
+            this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView21.Location = new System.Drawing.Point(-6, 451);
+            this.webView21.Name = "webView21";
+            this.webView21.Size = new System.Drawing.Size(983, 205);
+            this.webView21.TabIndex = 25;
+            this.webView21.ZoomFactor = 1D;
+            // 
             // Frm_orcamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,12 +267,12 @@
             this.BackgroundImage = global::ProjetoLogistica.Properties.Resources.backgr;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(964, 761);
+            this.Controls.Add(this.webView21);
             this.Controls.Add(this.txtKm);
             this.Controls.Add(this.txtBairroFim);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtBairroO);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.btnCalcularFrete);
             this.Controls.Add(this.txtRuafim);
             this.Controls.Add(this.textUFFim);
@@ -290,6 +294,7 @@
             this.Name = "Frm_orcamento";
             this.Text = "Orçamento";
             this.Load += new System.EventHandler(this.Frm_orcamento_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,11 +320,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCalcularFrete;
-        private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBairroO;
         private System.Windows.Forms.TextBox txtBairroFim;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label txtKm;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
     }
 }

@@ -9,6 +9,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Web.WebView2.Core;
 
 
 namespace ProjetoLogistica
@@ -19,7 +20,7 @@ namespace ProjetoLogistica
         {
             InitializeComponent();
 
-            webBrowser1.ScriptErrorsSuppressed = true;
+            
         }
 
         // ==========================================
@@ -253,16 +254,20 @@ namespace ProjetoLogistica
                 string origem = $"{textCidadeO.Text} - {textUFO.Text}";
                 string destino = $"{textCidadeFim.Text} - {textUFFim.Text}";
 
-                // Abre o OpenStreetMap focando na rota entre as cidades como contingência
+                // Abre o OpenStreetMap focando na rota entre as cidades como contingência usando o WebView2
                 string urlMapa = $"https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&route={Uri.EscapeDataString(origem)}%3B{Uri.EscapeDataString(destino)}";
 
-                webBrowser1.Navigate(urlMapa);
+                if (webView21.CoreWebView2 != null)
+                {
+                    webView21.CoreWebView2.Navigate(urlMapa);
+                }
             }
         }
 
-        private void Frm_orcamento_Load(object sender, EventArgs e)
+        private async void Frm_orcamento_Load(object sender, EventArgs e)
         {
-
+            // Inicializa o motor do WebView2 de forma assíncrona
+            await webView21.EnsureCoreWebView2Async(null);
         }
     }
 }
