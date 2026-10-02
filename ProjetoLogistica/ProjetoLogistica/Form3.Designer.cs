@@ -52,6 +52,18 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtKm = new System.Windows.Forms.Label();
             this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Txt_valordanf = new System.Windows.Forms.TextBox();
+            this.txt_volumes = new System.Windows.Forms.Label();
+            this.txt_qtd_devolumes = new System.Windows.Forms.TextBox();
+            this.Lbl_resultado = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txt_altura = new System.Windows.Forms.TextBox();
+            this.txt_largura = new System.Windows.Forms.TextBox();
+            this.txt_comprimento = new System.Windows.Forms.TextBox();
+            this.btn_enviarinfo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,7 +130,7 @@
             // 
             // txtCepDestino
             // 
-            this.txtCepDestino.Location = new System.Drawing.Point(101, 218);
+            this.txtCepDestino.Location = new System.Drawing.Point(101, 157);
             this.txtCepDestino.Mask = "00000-000";
             this.txtCepDestino.Name = "txtCepDestino";
             this.txtCepDestino.Size = new System.Drawing.Size(100, 20);
@@ -128,7 +140,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 221);
+            this.label1.Location = new System.Drawing.Point(13, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 9;
@@ -149,17 +161,18 @@
             this.txtRuaO.Name = "txtRuaO";
             this.txtRuaO.Size = new System.Drawing.Size(100, 20);
             this.txtRuaO.TabIndex = 11;
+            this.txtRuaO.TextChanged += new System.EventHandler(this.txtRuaO_TextChanged);
             // 
             // txtRuafim
             // 
-            this.txtRuafim.Location = new System.Drawing.Point(142, 265);
+            this.txtRuafim.Location = new System.Drawing.Point(142, 204);
             this.txtRuafim.Name = "txtRuafim";
             this.txtRuafim.Size = new System.Drawing.Size(100, 20);
             this.txtRuafim.TabIndex = 17;
             // 
             // textUFFim
             // 
-            this.textUFFim.Location = new System.Drawing.Point(679, 271);
+            this.textUFFim.Location = new System.Drawing.Point(679, 210);
             this.textUFFim.Name = "textUFFim";
             this.textUFFim.Size = new System.Drawing.Size(100, 20);
             this.textUFFim.TabIndex = 16;
@@ -167,7 +180,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(624, 274);
+            this.label2.Location = new System.Drawing.Point(624, 213);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 15;
@@ -175,7 +188,7 @@
             // 
             // textCidadeFim
             // 
-            this.textCidadeFim.Location = new System.Drawing.Point(322, 272);
+            this.textCidadeFim.Location = new System.Drawing.Point(322, 211);
             this.textCidadeFim.Name = "textCidadeFim";
             this.textCidadeFim.Size = new System.Drawing.Size(100, 20);
             this.textCidadeFim.TabIndex = 14;
@@ -183,7 +196,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(262, 275);
+            this.label3.Location = new System.Drawing.Point(262, 214);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 13;
@@ -192,7 +205,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 271);
+            this.label5.Location = new System.Drawing.Point(23, 210);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 13);
             this.label5.TabIndex = 12;
@@ -200,7 +213,7 @@
             // 
             // btnCalcularFrete
             // 
-            this.btnCalcularFrete.Location = new System.Drawing.Point(853, 422);
+            this.btnCalcularFrete.Location = new System.Drawing.Point(877, 213);
             this.btnCalcularFrete.Name = "btnCalcularFrete";
             this.btnCalcularFrete.Size = new System.Drawing.Size(75, 23);
             this.btnCalcularFrete.TabIndex = 18;
@@ -226,7 +239,7 @@
             // 
             // txtBairroFim
             // 
-            this.txtBairroFim.Location = new System.Drawing.Point(506, 272);
+            this.txtBairroFim.Location = new System.Drawing.Point(506, 211);
             this.txtBairroFim.Name = "txtBairroFim";
             this.txtBairroFim.Size = new System.Drawing.Size(100, 20);
             this.txtBairroFim.TabIndex = 23;
@@ -234,7 +247,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(453, 279);
+            this.label7.Location = new System.Drawing.Point(453, 218);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(34, 13);
             this.label7.TabIndex = 22;
@@ -243,22 +256,121 @@
             // txtKm
             // 
             this.txtKm.AutoSize = true;
-            this.txtKm.Location = new System.Drawing.Point(789, 427);
+            this.txtKm.Location = new System.Drawing.Point(23, 637);
             this.txtKm.Name = "txtKm";
             this.txtKm.Size = new System.Drawing.Size(33, 13);
             this.txtKm.TabIndex = 24;
             this.txtKm.Text = "txtKm";
+            this.txtKm.Click += new System.EventHandler(this.txtKm_Click);
             // 
             // webView21
             // 
             this.webView21.AllowExternalDrop = true;
             this.webView21.CreationProperties = null;
             this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView21.Location = new System.Drawing.Point(-6, 451);
+            this.webView21.Location = new System.Drawing.Point(-13, 237);
             this.webView21.Name = "webView21";
-            this.webView21.Size = new System.Drawing.Size(983, 205);
+            this.webView21.Size = new System.Drawing.Size(982, 381);
             this.webView21.TabIndex = 25;
             this.webView21.ZoomFactor = 1D;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(89, 637);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 13);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "Valor da NF";
+            // 
+            // Txt_valordanf
+            // 
+            this.Txt_valordanf.Location = new System.Drawing.Point(169, 630);
+            this.Txt_valordanf.Name = "Txt_valordanf";
+            this.Txt_valordanf.Size = new System.Drawing.Size(100, 20);
+            this.Txt_valordanf.TabIndex = 27;
+            // 
+            // txt_volumes
+            // 
+            this.txt_volumes.AutoSize = true;
+            this.txt_volumes.Location = new System.Drawing.Point(428, 637);
+            this.txt_volumes.Name = "txt_volumes";
+            this.txt_volumes.Size = new System.Drawing.Size(42, 13);
+            this.txt_volumes.TabIndex = 28;
+            this.txt_volumes.Text = "Volume";
+            // 
+            // txt_qtd_devolumes
+            // 
+            this.txt_qtd_devolumes.Location = new System.Drawing.Point(476, 634);
+            this.txt_qtd_devolumes.Name = "txt_qtd_devolumes";
+            this.txt_qtd_devolumes.Size = new System.Drawing.Size(100, 20);
+            this.txt_qtd_devolumes.TabIndex = 29;
+            // 
+            // Lbl_resultado
+            // 
+            this.Lbl_resultado.AutoSize = true;
+            this.Lbl_resultado.Location = new System.Drawing.Point(735, 637);
+            this.Lbl_resultado.Name = "Lbl_resultado";
+            this.Lbl_resultado.Size = new System.Drawing.Size(55, 13);
+            this.Lbl_resultado.TabIndex = 31;
+            this.Lbl_resultado.Text = "Resultado";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(428, 671);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(34, 13);
+            this.label9.TabIndex = 32;
+            this.label9.Text = "Altura";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(427, 705);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(43, 13);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Largura";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(402, 739);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(68, 13);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "Comprimento";
+            // 
+            // txt_altura
+            // 
+            this.txt_altura.Location = new System.Drawing.Point(476, 668);
+            this.txt_altura.Name = "txt_altura";
+            this.txt_altura.Size = new System.Drawing.Size(100, 20);
+            this.txt_altura.TabIndex = 35;
+            // 
+            // txt_largura
+            // 
+            this.txt_largura.Location = new System.Drawing.Point(476, 702);
+            this.txt_largura.Name = "txt_largura";
+            this.txt_largura.Size = new System.Drawing.Size(100, 20);
+            this.txt_largura.TabIndex = 36;
+            // 
+            // txt_comprimento
+            // 
+            this.txt_comprimento.Location = new System.Drawing.Point(476, 736);
+            this.txt_comprimento.Name = "txt_comprimento";
+            this.txt_comprimento.Size = new System.Drawing.Size(100, 20);
+            this.txt_comprimento.TabIndex = 37;
+            // 
+            // btn_enviarinfo
+            // 
+            this.btn_enviarinfo.Location = new System.Drawing.Point(608, 680);
+            this.btn_enviarinfo.Name = "btn_enviarinfo";
+            this.btn_enviarinfo.Size = new System.Drawing.Size(75, 23);
+            this.btn_enviarinfo.TabIndex = 38;
+            this.btn_enviarinfo.Text = "button1";
+            this.btn_enviarinfo.UseVisualStyleBackColor = true;
             // 
             // Frm_orcamento
             // 
@@ -267,6 +379,18 @@
             this.BackgroundImage = global::ProjetoLogistica.Properties.Resources.backgr;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(964, 761);
+            this.Controls.Add(this.btn_enviarinfo);
+            this.Controls.Add(this.txt_comprimento);
+            this.Controls.Add(this.txt_largura);
+            this.Controls.Add(this.txt_altura);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.Lbl_resultado);
+            this.Controls.Add(this.txt_qtd_devolumes);
+            this.Controls.Add(this.txt_volumes);
+            this.Controls.Add(this.Txt_valordanf);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.webView21);
             this.Controls.Add(this.txtKm);
             this.Controls.Add(this.txtBairroFim);
@@ -326,5 +450,17 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label txtKm;
         private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox Txt_valordanf;
+        private System.Windows.Forms.Label txt_volumes;
+        private System.Windows.Forms.TextBox txt_qtd_devolumes;
+        private System.Windows.Forms.Label Lbl_resultado;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txt_altura;
+        private System.Windows.Forms.TextBox txt_largura;
+        private System.Windows.Forms.TextBox txt_comprimento;
+        private System.Windows.Forms.Button btn_enviarinfo;
     }
 }

@@ -25,3 +25,131 @@
 2026-10-01 12:20:38.353: [INFO] BookmarksLoadDropped droppedNodes=0
 2026-10-01 12:20:38.353: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
 2026-10-01 12:21:11.737: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 11:08:45.401: [INFO] CurrentProfilePath: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 11:08:45.401: [INFO] Profiles total count: 1
+2026-10-02 11:08:45.401: [INFO] Profile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=null
+2026-10-02 11:08:45.401: [INFO] LastUsedProfileDir: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 11:08:45.401: [INFO] OnDoneLoading sync enabled: 0
+2026-10-02 11:08:45.401: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-02 11:08:45.401: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-02 11:08:45.401: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 11:11:35.239: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 11:13:28.542: [INFO] CurrentProfilePath: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 11:13:28.542: [INFO] Profiles total count: 1
+2026-10-02 11:13:28.542: [INFO] Profile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=null
+2026-10-02 11:13:28.542: [INFO] LastUsedProfileDir: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 11:13:28.542: [INFO] OnDoneLoading sync enabled: 0
+2026-10-02 11:13:28.542: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-02 11:13:28.542: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-02 11:13:28.542: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 11:23:41.644: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 11:29:54.037: [INFO] CurrentProfilePath: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 11:29:54.037: [INFO] Profiles total count: 1
+2026-10-02 11:29:54.037: [INFO] Profile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:16:39.932Z
+2026-10-02 11:29:54.037: [INFO] LastUsedProfileDir: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 11:29:54.037: [INFO] MostRecentlyActiveProfile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:16:39.932Z
+2026-10-02 11:29:54.037: [INFO] OnDoneLoading sync enabled: 0
+2026-10-02 11:29:54.037: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-02 11:29:54.037: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-02 11:29:54.037: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 11:30:40.493: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 11:32:00.118: [INFO] CurrentProfilePath: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 11:32:00.118: [INFO] Profiles total count: 1
+2026-10-02 11:32:00.118: [INFO] Profile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:16:39.932Z
+2026-10-02 11:32:00.118: [INFO] LastUsedProfileDir: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 11:32:00.118: [INFO] MostRecentlyActiveProfile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:16:39.932Z
+2026-10-02 11:32:00.118: [INFO] OnDoneLoading sync enabled: 0
+2026-10-02 11:32:00.118: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-02 11:32:00.118: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-02 11:32:00.118: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 11:32:29.440: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 11:38:22.193: [INFO] CurrentProfilePath: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 11:38:22.193: [INFO] Profiles total count: 1
+2026-10-02 11:38:22.193: [INFO] Profile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:32:21.270Z
+2026-10-02 11:38:22.193: [INFO] LastUsedProfileDir: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 11:38:22.193: [INFO] MostRecentlyActiveProfile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:32:21.270Z
+2026-10-02 11:38:22.193: [INFO] OnDoneLoading sync enabled: 0
+2026-10-02 11:38:22.193: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-02 11:38:22.193: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-02 11:38:22.193: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 11:39:53.211: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 11:40:48.012: [INFO] CurrentProfilePath: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 11:40:48.012: [INFO] Profiles total count: 1
+2026-10-02 11:40:48.013: [INFO] Profile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:39:48.894Z
+2026-10-02 11:40:48.013: [INFO] LastUsedProfileDir: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 11:40:48.013: [INFO] MostRecentlyActiveProfile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:39:48.894Z
+2026-10-02 11:40:48.013: [INFO] OnDoneLoading sync enabled: 0
+2026-10-02 11:40:48.013: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-02 11:40:48.013: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-02 11:40:48.013: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 11:41:24.329: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 11:41:55.243: [INFO] CurrentProfilePath: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 11:41:55.243: [INFO] Profiles total count: 1
+2026-10-02 11:41:55.244: [INFO] Profile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:39:48.894Z
+2026-10-02 11:41:55.244: [INFO] LastUsedProfileDir: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 11:41:55.244: [INFO] MostRecentlyActiveProfile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:39:48.894Z
+2026-10-02 11:41:55.244: [INFO] OnDoneLoading sync enabled: 0
+2026-10-02 11:41:55.244: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-02 11:41:55.244: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-02 11:41:55.244: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 11:44:13.915: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 11:50:55.646: [INFO] CurrentProfilePath: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 11:50:55.646: [INFO] Profiles total count: 1
+2026-10-02 11:50:55.646: [INFO] Profile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:39:48.894Z
+2026-10-02 11:50:55.646: [INFO] LastUsedProfileDir: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 11:50:55.646: [INFO] MostRecentlyActiveProfile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:39:48.894Z
+2026-10-02 11:50:55.646: [INFO] OnDoneLoading sync enabled: 0
+2026-10-02 11:50:55.646: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-02 11:50:55.646: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-02 11:50:55.646: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 11:51:20.730: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 11:53:56.762: [INFO] CurrentProfilePath: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 11:53:56.762: [INFO] Profiles total count: 1
+2026-10-02 11:53:56.762: [INFO] Profile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:39:48.894Z
+2026-10-02 11:53:56.762: [INFO] LastUsedProfileDir: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 11:53:56.762: [INFO] MostRecentlyActiveProfile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:39:48.894Z
+2026-10-02 11:53:56.762: [INFO] OnDoneLoading sync enabled: 0
+2026-10-02 11:53:56.762: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-02 11:53:56.762: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-02 11:53:56.762: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 11:54:12.428: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 12:03:17.395: [INFO] CurrentProfilePath: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 12:03:17.395: [INFO] Profiles total count: 1
+2026-10-02 12:03:17.395: [INFO] Profile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:39:48.894Z
+2026-10-02 12:03:17.395: [INFO] LastUsedProfileDir: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 12:03:17.395: [INFO] MostRecentlyActiveProfile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:39:48.894Z
+2026-10-02 12:03:17.396: [INFO] OnDoneLoading sync enabled: 0
+2026-10-02 12:03:17.396: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-02 12:03:17.396: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-02 12:03:17.396: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 12:03:58.461: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 12:06:37.126: [INFO] CurrentProfilePath: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 12:06:37.126: [INFO] Profiles total count: 1
+2026-10-02 12:06:37.126: [INFO] Profile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:39:48.894Z
+2026-10-02 12:06:37.126: [INFO] LastUsedProfileDir: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 12:06:37.126: [INFO] MostRecentlyActiveProfile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:39:48.894Z
+2026-10-02 12:06:37.126: [INFO] OnDoneLoading sync enabled: 0
+2026-10-02 12:06:37.126: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-02 12:06:37.126: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-02 12:06:37.126: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 12:07:15.072: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 12:08:33.243: [INFO] CurrentProfilePath: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 12:08:33.243: [INFO] Profiles total count: 1
+2026-10-02 12:08:33.270: [INFO] Profile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:39:48.894Z
+2026-10-02 12:08:33.270: [INFO] LastUsedProfileDir: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 12:08:33.270: [INFO] MostRecentlyActiveProfile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:39:48.894Z
+2026-10-02 12:08:33.270: [INFO] OnDoneLoading sync enabled: 0
+2026-10-02 12:08:33.270: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-02 12:08:33.270: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-02 12:08:33.270: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 12:11:10.418: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 12:49:44.228: [INFO] CurrentProfilePath: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 12:49:44.228: [INFO] Profiles total count: 1
+2026-10-02 12:49:44.229: [INFO] Profile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:39:48.894Z
+2026-10-02 12:49:44.229: [INFO] LastUsedProfileDir: C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default
+2026-10-02 12:49:44.229: [INFO] MostRecentlyActiveProfile: name=Perfil 1 path=C:\Users\DB\Desktop\ProjetoLogistica\ProjetoLogistica\bin\Debug\ProjetoLogistica.exe.WebView2\EBWebView\Default lastActive=2026-10-02T11:39:48.894Z
+2026-10-02 12:49:44.229: [INFO] OnDoneLoading sync enabled: 0
+2026-10-02 12:49:44.229: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-02 12:49:44.229: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-02 12:49:44.229: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-02 12:49:48.220: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1

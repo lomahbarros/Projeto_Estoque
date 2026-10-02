@@ -1,120 +1,111 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Globalization;
-using System.Linq;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Web.WebView2.Core;
-
 
 namespace ProjetoLogistica
 {
     public partial class Frm_orcamento : Form
-    {
-        public Frm_orcamento()
-        {
-            InitializeComponent();
 
-            
+
+
+    {
+        // ==========================================
+        // VARIÁVEL DO KM (use KmCalculado no orçamento)
+        // ==========================================
+        private double kmCalculado;
+        public double KmCalculado { get { return kmCalculado; } }
+
+        // Resultado da busca de coordenadas
+        private class Ponto
+        {
+            public double Lat;
+            public double Lon;
+            public bool Aproximado; // true = achou só a cidade, não a rua
+        }
+        // >>> cole os dois métodos aqui, junto dos outros métodos <<<
+        private void txtRuaO_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txtKm_Click(object sender, EventArgs e)
+        {
+        }
+
+        private DateTime _ultimaConsultaNominatim = DateTime.MinValue;
+        private string _ultimoErro = "";
+
+        public Frm_orcamento()
+
+
+        
+
+
+        {
+      
+
+            InitializeComponent();
+        }
+
+        private async void Frm_orcamento_Load(object sender, EventArgs e)
+        {
+            // Inicializa o motor do WebView2
+            await webView21.EnsureCoreWebView2Async(null);
         }
 
         // ==========================================
         // BUSCA DE CEP - ORIGEM
         // ==========================================
-        private void txtCepOrigem_Leave(object sender, EventArgs e)
+        private async void txtCepOrigem_Leave(object sender, EventArgs e)
         {
-            string cep = txtCepOrigem.Text.Replace("-", "").Trim();
-
-            if (cep.Length == 8)
-            {
-                try
-                {
-                    string url = $"https://viacep.com.br/ws/{cep}/json/";
-
-                    using (WebClient client = new WebClient())
-                    {
-                        // Garante o UTF-8 para evitar caracteres estranhos e acentos corrompidos
-                        client.Encoding = System.Text.Encoding.UTF8;
-
-                        string resposta = client.DownloadString(url);
-
-                        if (resposta.Contains("\"erro\":true") || resposta.Contains("\"erro\": true"))
-                        {
-                            MessageBox.Show("CEP de Origem não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-
-                        string logradouro = ExtrairValorJson(resposta, "logradouro");
-                        string bairro = ExtrairValorJson(resposta, "bairro");
-                        string cidade = ExtrairValorJson(resposta, "localidade");
-                        string uf = ExtrairValorJson(resposta, "uf");
-
-                        // Preenchendo os campos específicos de ORIGEM:
-                        txtRuaO.Text = logradouro;
-                        txtBairroO.Text = bairro;   // <--- Caixa específica do bairro de origem
-                        textCidadeO.Text = cidade;
-                        textUFO.Text = uf;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao buscar o CEP de Origem: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            await BuscarCep(txtCepOrigem.Text, "Origem", txtRuaO, txtBairroO, textCidadeO, textUFO);
         }
 
         // ==========================================
         // BUSCA DE CEP - DESTINO
         // ==========================================
-        private void txtCepDestino_Leave(object sender, EventArgs e)
+        private async void txtCepDestino_Leave(object sender, EventArgs e)
         {
-            string cep = txtCepDestino.Text.Replace("-", "").Trim();
+            await BuscarCep(txtCepDestino.Text, "Destino", txtRuafim, txtBairroFim, textCidadeFim, textUFFim);
+        }
 
-            if (cep.Length == 8)
+        private async Task BuscarCep(string cepTexto, string rotulo,
+                                     Control rua, Control bairro, Control cidade, Control uf)
+        {
+            string cep = Regex.Replace(cepTexto ?? "", "[^0-9]", "");
+            if (cep.Length != 8) return;
+
+            try
             {
-                try
+                using (WebClient client = new WebClient())
                 {
-                    string url = $"https://viacep.com.br/ws/{cep}/json/";
+                    client.Encoding = Encoding.UTF8;
+                    string resposta = await client.DownloadStringTaskAsync($"https://viacep.com.br/ws/{cep}/json/");
 
-                    using (WebClient client = new WebClient())
+                    if (Regex.IsMatch(resposta, "\"erro\"\\s*:\\s*true"))
                     {
-                        // GARANTE O UTF-8 PARA CORRIGIR OS ACENTOS
-                        client.Encoding = System.Text.Encoding.UTF8;
-
-                        string resposta = client.DownloadString(url);
-
-                        if (resposta.Contains("\"erro\":true") || resposta.Contains("\"erro\": true"))
-                        {
-                            MessageBox.Show("CEP de Destino não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-
-                        string logradouro = ExtrairValorJson(resposta, "logradouro");
-                        string bairro = ExtrairValorJson(resposta, "bairro");
-                        string cidade = ExtrairValorJson(resposta, "localidade");
-                        string uf = ExtrairValorJson(resposta, "uf");
-
-                        // Preenchendo os campos de Destino de forma separada e limpa:
-                        txtRuafim.Text = logradouro;
-                        txtBairroFim.Text = bairro;   // <--- Atribui o bairro à nova caixinha (confirme se o nome do seu componente é este)
-                        textCidadeFim.Text = cidade;
-                        textUFFim.Text = uf;
+                        MessageBox.Show($"CEP de {rotulo} não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
+
+                    rua.Text = ExtrairValorJson(resposta, "logradouro");
+                    bairro.Text = ExtrairValorJson(resposta, "bairro");
+                    cidade.Text = ExtrairValorJson(resposta, "localidade");
+                    uf.Text = ExtrairValorJson(resposta, "uf");
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao buscar o CEP de Destino: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao buscar o CEP de {rotulo}: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         // ==========================================
-        // FUNÇÃO AUXILIAR PARA LER O JSON DO VIACEP
+        // LEITURA DE JSON (texto entre aspas e número)
         // ==========================================
         private string ExtrairValorJson(string json, string chave)
         {
@@ -138,136 +129,182 @@ namespace ProjetoLogistica
             }
         }
 
-
-        // ==========================================
-        // CÁLCULO DE DISTÂNCIA E ROTA EM KM
-        // ==========================================
-        private double ObterDistanciaEmKm(string origemEndereco, string destinoEndereco)
+        private string ExtrairNumeroJson(string json, string chave)
         {
-            try
-            {
-                double latOrigem, lonOrigem;
-                if (!ObterCoordenadas(origemEndereco, out latOrigem, out lonOrigem))
-                {
-                    MessageBox.Show("Falha ao buscar coordenadas da ORIGEM:\n" + origemEndereco, "Diagnóstico", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return 0;
-                }
-
-                double latDestino, lonDestino;
-                if (!ObterCoordenadas(destinoEndereco, out latDestino, out lonDestino))
-                {
-                    MessageBox.Show("Falha ao buscar coordenadas do DESTINO:\n" + destinoEndereco, "Diagnóstico", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return 0;
-                }
-
-                string urlRota = $"https://router.project-osrm.org/route/v1/driving/{lonOrigem.ToString(System.Globalization.CultureInfo.InvariantCulture)},{latOrigem.ToString(System.Globalization.CultureInfo.InvariantCulture)};{lonDestino.ToString(System.Globalization.CultureInfo.InvariantCulture)},{latDestino.ToString(System.Globalization.CultureInfo.InvariantCulture)}?overview=false";
-
-                using (WebClient client = new WebClient())
-                {
-                    client.Encoding = System.Text.Encoding.UTF8;
-                    client.Headers.Add("user-agent", "ProjetoLogisticaCsharp/1.0");
-                    string resposta = client.DownloadString(urlRota);
-
-                    string distanciaMetrosStr = ExtrairValorJson(resposta, "distance");
-
-                    if (double.TryParse(distanciaMetrosStr, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out double distanciaMetros))
-                    {
-                        return Math.Round(distanciaMetros / 1000.0, 2);
-                    }
-                    else
-                    {
-                        MessageBox.Show("A API de rotas (OSRM) não retornou um valor numérico válido.", "Diagnóstico", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Exceção capturada no cálculo: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            return 0;
+            var m = Regex.Match(json, "\"" + Regex.Escape(chave) + "\"\\s*:\\s*(-?[0-9]+(\\.[0-9]+)?)");
+            return m.Success ? m.Groups[1].Value : "";
         }
 
-        // Função corrigida para buscar Latitude e Longitude com suporte a Acentos (UTF-8)
-        private bool ObterCoordenadas(string endereco, out double latitude, out double longitude)
+        // ==========================================
+        // COORDENADAS (Nominatim), com tentativas em etapas
+        // ==========================================
+        private async Task<Ponto> ObterPontoComFallback(string rua, string bairro, string cidade, string uf)
         {
-            latitude = 0;
-            longitude = 0;
+            rua = (rua ?? "").Trim();
+            bairro = (bairro ?? "").Trim();
+            cidade = (cidade ?? "").Trim();
+            uf = (uf ?? "").Trim();
+
+            var tentativas = new List<KeyValuePair<string, bool>>();
+
+            if (rua != "" && bairro != "")
+                tentativas.Add(new KeyValuePair<string, bool>($"{rua}, {bairro}, {cidade}, {uf}, Brasil", false));
+            if (rua != "")
+                tentativas.Add(new KeyValuePair<string, bool>($"{rua}, {cidade}, {uf}, Brasil", false));
+            tentativas.Add(new KeyValuePair<string, bool>($"{cidade}, {uf}, Brasil", true));
+
+            foreach (var t in tentativas)
+            {
+                Ponto p = await ObterCoordenadas(t.Key);
+                if (p != null)
+                {
+                    p.Aproximado = t.Value;
+                    return p;
+                }
+            }
+            return null;
+        }
+
+        private async Task<Ponto> ObterCoordenadas(string endereco)
+        {
             try
             {
-                string urlGeo = $"https://nominatim.openstreetmap.org/search?q={Uri.EscapeDataString(endereco)}&format=json&limit=1";
+                // Nominatim permite no máximo 1 consulta por segundo
+                double esperar = 1100 - (DateTime.Now - _ultimaConsultaNominatim).TotalMilliseconds;
+                if (esperar > 0) await Task.Delay((int)esperar);
+                _ultimaConsultaNominatim = DateTime.Now;
+
+                string url = $"https://nominatim.openstreetmap.org/search?q={Uri.EscapeDataString(endereco)}&format=json&limit=1";
 
                 using (WebClient client = new WebClient())
                 {
-                    // Força o uso de UTF-8 para aceitar acentos corretamente (Ç, ã, é, etc.)
-                    client.Encoding = System.Text.Encoding.UTF8;
-
+                    client.Encoding = Encoding.UTF8;
                     client.Headers.Add("user-agent", "ProjetoLogisticaCsharp/1.0");
-                    string resposta = client.DownloadString(urlGeo);
+                    string resposta = await client.DownloadStringTaskAsync(url);
 
-                    if (resposta.Length > 2 && resposta.Contains("lat"))
+                    if (resposta.Length > 2 && resposta.Contains("\"lat\""))
                     {
-                        string latStr = ExtrairValorJson(resposta.TrimStart('[').TrimEnd(']'), "lat");
-                        string lonStr = ExtrairValorJson(resposta.TrimStart('[').TrimEnd(']'), "lon");
+                        string latStr = ExtrairValorJson(resposta, "lat");
+                        string lonStr = ExtrairValorJson(resposta, "lon");
 
-                        if (double.TryParse(latStr, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out latitude) &&
-    double.TryParse(lonStr, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out longitude))
+                        double lat, lon;
+                        if (double.TryParse(latStr, NumberStyles.Any, CultureInfo.InvariantCulture, out lat) &&
+                            double.TryParse(lonStr, NumberStyles.Any, CultureInfo.InvariantCulture, out lon))
                         {
-                            return true;
+                            return new Ponto { Lat = lat, Lon = lon };
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                // Opcional: descomente a linha abaixo se quiser ver se deu algum erro de rede específico
-                // MessageBox.Show("Erro em ObterCoordenadas: " + ex.Message);
+                _ultimoErro = ex.Message;
             }
-            return false;
+            return null;
         }
 
-
-
-
-
-
-        private void btnCalcularFrete_Click(object sender, EventArgs e)
+        // ==========================================
+        // DISTÂNCIA POR ROTA (OSRM) - retorna km, ou 0 se falhar
+        // ==========================================
+        private async Task<double> ObterDistanciaEmKm(Ponto origem, Ponto destino)
         {
-            // Monta o endereço completo de origem e destino incluindo os campos de bairro
-            string origemCompleta = $"{txtRuaO.Text}, {txtBairroO.Text}, {textCidadeO.Text} - {textUFO.Text}";
-            string destinoCompleta = $"{txtRuafim.Text}, {txtBairroFim.Text}, {textCidadeFim.Text} - {textUFFim.Text}";
-
-            // Chama a função que calcula os quilómetros
-            double kmTotal = ObterDistanciaEmKm(origemCompleta, destinoCompleta);
-
-            if (kmTotal > 0)
+            try
             {
-                MessageBox.Show($"A distância calculada da rota é de: {kmTotal} km", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var ic = CultureInfo.InvariantCulture;
+                string url = "https://router.project-osrm.org/route/v1/driving/"
+                    + origem.Lon.ToString(ic) + "," + origem.Lat.ToString(ic) + ";"
+                    + destino.Lon.ToString(ic) + "," + destino.Lat.ToString(ic)
+                    + "?overview=false";
 
-                // ATIVADO: Preenche o campo txtKm no formulário corretamente
-                txtKm.Text = kmTotal.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Não foi possível calcular a distância exata para os endereços informados.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                string origem = $"{textCidadeO.Text} - {textUFO.Text}";
-                string destino = $"{textCidadeFim.Text} - {textUFFim.Text}";
-
-                // Abre o OpenStreetMap focando na rota entre as cidades como contingência usando o WebView2
-                string urlMapa = $"https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&route={Uri.EscapeDataString(origem)}%3B{Uri.EscapeDataString(destino)}";
-
-                if (webView21.CoreWebView2 != null)
+                using (WebClient client = new WebClient())
                 {
-                    webView21.CoreWebView2.Navigate(urlMapa);
+                    client.Encoding = Encoding.UTF8;
+                    client.Headers.Add("user-agent", "ProjetoLogisticaCsharp/1.0");
+                    string resposta = await client.DownloadStringTaskAsync(url);
+
+                    string metrosStr = ExtrairNumeroJson(resposta, "distance");
+                    double metros;
+                    if (double.TryParse(metrosStr, NumberStyles.Any, ic, out metros) && metros > 0)
+                    {
+                        return Math.Round(metros / 1000.0, 2);
+                    }
+                    _ultimoErro = "O OSRM não retornou uma distância válida.";
                 }
             }
+            catch (Exception ex)
+            {
+                _ultimoErro = ex.Message;
+            }
+            return 0;
         }
 
-        private async void Frm_orcamento_Load(object sender, EventArgs e)
+        // ==========================================
+        // BOTÃO CALCULAR FRETE
+        // 1) acha as coordenadas  2) calcula o km  3) se deu certo, abre a rota no mapa
+        // ==========================================
+        private async void btnCalcularFrete_Click(object sender, EventArgs e)
         {
-            // Inicializa o motor do WebView2 de forma assíncrona
-            await webView21.EnsureCoreWebView2Async(null);
+            btnCalcularFrete.Enabled = false;
+            Cursor = Cursors.WaitCursor;
+
+            try
+            {
+                kmCalculado = 0;
+                txtKm.Text = "";
+                _ultimoErro = "";
+
+                // 1) Coordenadas
+                Ponto origem = await ObterPontoComFallback(txtRuaO.Text, txtBairroO.Text, textCidadeO.Text, textUFO.Text);
+                if (origem == null)
+                {
+                    MessageBox.Show("Não foi possível localizar a ORIGEM." +
+                        (_ultimoErro != "" ? "\n" + _ultimoErro : ""), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                Ponto destino = await ObterPontoComFallback(txtRuafim.Text, txtBairroFim.Text, textCidadeFim.Text, textUFFim.Text);
+                if (destino == null)
+                {
+                    MessageBox.Show("Não foi possível localizar o DESTINO." +
+                        (_ultimoErro != "" ? "\n" + _ultimoErro : ""), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // 2) Distância
+                double km = await ObterDistanciaEmKm(origem, destino);
+                if (km <= 0)
+                {
+                    MessageBox.Show("Não foi possível calcular a distância." +
+                        (_ultimoErro != "" ? "\n" + _ultimoErro : ""), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                kmCalculado = km;
+                txtKm.Text = km.ToString("0.00");
+
+                // 3) Sem erros: mostra a rota no mapa usando as coordenadas
+                var ic = CultureInfo.InvariantCulture;
+                string urlMapa = "https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&route="
+                    + origem.Lat.ToString(ic) + "%2C" + origem.Lon.ToString(ic)
+                    + "%3B"
+                    + destino.Lat.ToString(ic) + "%2C" + destino.Lon.ToString(ic);
+
+                if (webView21.CoreWebView2 == null)
+                {
+                    await webView21.EnsureCoreWebView2Async(null);
+                }
+                webView21.CoreWebView2.Navigate(urlMapa);
+
+                string aviso = (origem.Aproximado || destino.Aproximado)
+                    ? "\n\nAtenção: distância aproximada. Um dos endereços não foi encontrado com a rua, então usei o centro da cidade."
+                    : "";
+                MessageBox.Show($"Distância da rota: {txtKm.Text} km{aviso}", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+                btnCalcularFrete.Enabled = true;
+            }
         }
     }
 }
